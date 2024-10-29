@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben Aissa Music - Registrazione</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+            font-size: 16px;
+        }
+
+        .checkbox-group,
+        .radio-group {
+            margin-top: 15px;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .checkbox-group label,
+        .radio-group label {
+            display: block;
+            margin: 5px 0;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+    <script>
+        function inviaRegistrazione(event) {
+            event.preventDefault();
+            alert("Registrazione inviata!");
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Registrazione a Ben Aissa Music</h1>
+
+        <form onsubmit="inviaRegistrazione(event)">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Inserisci il tuo nome" required>
+
+            <label for="cognome">Cognome:</label>
+            <input type="text" id="cognome" name="cognome" placeholder="Inserisci il tuo cognome" required>
+
+            <label for="email">Indirizzo Email:</label>
+            <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Crea una password" required>
+
+            <label for="data-nascita">Data di Nascita:</label>
+            <input type="date" id="data-nascita" name="data-nascita" required>
+
+            <label for="telefono">Numero di Telefono:</label>
+            <input type="number" id="telefono" name="telefono" placeholder="Inserisci il tuo numero" required>
+
+            <div class="checkbox-group">
+                <label>Seleziona i tuoi gusti musicali:</label>
+                <label><input type="checkbox" name="generi" value="Pop"> Pop</label>
+                <label><input type="checkbox" name="generi" value="Rock"> Rock</label>
+                <label><input type="checkbox" name="generi" value="Hip-Hop"> Hip-Hop</label>
+                <label><input type="checkbox" name="generi" value="Jazz"> Jazz</label>
+                <label><input type="checkbox" name="generi" value="Classica"> Classica</label>
+            </div>
+
+            <div class="radio-group">
+                <label>Accetti i termini e le condizioni?</label>
+                <label><input type="radio" name="termini" value="si" required> Sì</label>
+            </div>
+
+            <button type="submit">Invia registrazione</button>
+        </form>
+    </div>
+
+</body>
+</html>
